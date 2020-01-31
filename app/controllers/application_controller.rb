@@ -1,4 +1,4 @@
-rakeclass ApplicationController < Sinatra::Base
+class ApplicationController < Sinatra::Base
   register Sinatra::ActiveRecordExtension
   set :views, Proc.new { File.join(root, "../views/") }
 
@@ -49,4 +49,7 @@ rakeclass ApplicationController < Sinatra::Base
     @user = User.find(session[:user_id])
     erb :'/users/home'
   end
+  
 end
+  
+
